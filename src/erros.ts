@@ -19,6 +19,7 @@ export const handleErrors = (
       message: err.message,
     });
   }
+
   if (err instanceof ZodError) {
     return  response.status(400).json({
       message: err.flatten().fieldErrors,
