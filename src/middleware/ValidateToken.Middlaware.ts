@@ -10,7 +10,7 @@ export const validateTokenMiddleware = async(req:Request,res:Response,next:NextF
     }
 
     token = token.split(" ")[1]
-    jwt.verify(token,process.env.SECRET_KEY!,async(error,decoded:any)=>{
+    jwt.verify(token,process.env.Secret_Key!,async(error,decoded:any)=>{
         if(error){
             return res.status(401).json({message:error.message})
         }

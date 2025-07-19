@@ -1,10 +1,11 @@
 import { Repository } from "typeorm";
-import { iCreateLogin, iRetunrLogin } from "../Schemas/login.Schema";
+
 import { Usuarios } from "../entities/Usuarios.entities";
 import { AppDataSource } from "../data-source";
 import { AppError } from "../erros";
 import jwt from "jsonwebtoken"
 import {compare} from "bcryptjs"
+import { iCreateLogin } from "../Schemas/Login.Schema";
 export const createLoginService=async(loginData:iCreateLogin):Promise<string>=>{
 
     const userRepository:Repository<Usuarios> = AppDataSource.getRepository(Usuarios)

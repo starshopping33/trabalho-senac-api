@@ -6,4 +6,4 @@ import { validateTokenMiddleware } from "../middleware/ValidateToken.Middlaware"
 
 export const Loginroutes:Router = Router()
 
-Loginroutes.post(" " ValidateDataMiddleware(createLoginSchema),createLoginController,validateTokenMiddleware)
+Loginroutes.post("", ValidateDataMiddleware(createLoginSchema),createLoginController,validateTokenMiddleware)
