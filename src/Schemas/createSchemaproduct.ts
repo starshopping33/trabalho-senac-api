@@ -10,5 +10,5 @@ export const returnPostSchema = craetePostsSchema.extend({
     id: z.number()
 })
 
-export type CreatePost = z.infer<typeof craetePostsSchema>
+export type CreateProduto = z.infer<typeof craetePostsSchema>
 export type Post = z.infer<typeof returnPostSchema>

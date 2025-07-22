@@ -9,9 +9,11 @@ export class produto {
     @Column()
     nome: string
 
-    @Column("decimal",{precision:10, scale:2})
-    preco:number;
+    @Column({type:"int"})
+    preco_de_venda:number;
 
+    @Column({type:"int"})
+    preco_de_custo:number;
 
     @Column({nullable: true })
     descricao: string;
